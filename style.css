@@ -1,0 +1,279 @@
+:root {
+  --primary: blue;
+
+  --box-shadow: -5px 5px 10px 5px rgba(128, 128, 128, 0.782);
+}
+body {
+  margin: 0;
+}
+.global {
+  background: rgba(182, 164, 57, 0.902);
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+.btn {
+  background: orangered;
+  padding: 8px 16px;
+  border: 1px solid orangered;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+.global > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  color: white;
+}
+
+header {
+  background-color: rgb(82, 146, 154);
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  color: white;
+}
+header ul {
+  display: flex;
+  list-style-type: none;
+}
+header ul li {
+  margin-left: 16px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+header ul li:hover {
+  cursor: pointer;
+  background-color: brown;
+  transform: scale(1.5);
+}
+.logo {
+  background-color: white;
+  color: blue;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo div {
+  border: 3px dotted blue;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero {
+  background: url(./img/aaa.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-content {
+  background-color: rgb(0, 0, 0, 0.688);
+  color: white;
+  width: 500px;
+
+  padding: 32px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content hr {
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.articles {
+  background: white;
+  width: 66%;
+}
+
+article {
+  display: flex;
+  gap: 16px;
+  box-shadow: -5px 5px 10px 5px rgba(128, 128, 128, 0.782);
+  padding: 20px 16px;
+  border-radius: 10px;
+  margin-top: 24px;
+}
+
+.art-img {
+  width: 250px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: blue;
+}
+
+article .btn {
+  float: right;
+}
+.footer {
+  background: black;
+  color: white;
+  padding: 50px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.side-links {
+  background: white;
+  width: 34%;
+}
+.country {
+  background: rgba(255, 255, 0, 0.556);
+  padding: 16px;
+  border-radius: 5px;
+  margin-bottom: 32px;
+  margin-top: 24px;
+}
+
+.date {
+  background: gray;
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.recc {
+  background: rgb(94, 132, 139);
+  margin-top: 64px;
+  padding: 45px;
+}
+
+.card-list {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.card {
+  width: 350px;
+  box-shadow: var(--box-shadow);
+  background: white;
+  padding-bottom: 32px;
+  border-radius: 10px;
+}
+
+.card img {
+  border-radius: 10px 10px 0 0;
+}
+
+.subs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px 0;
+  padding: 32px 0;
+}
+
+.subs input {
+  line-height: 32px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  margin-right: 16px;
+}
+
+/* media  */
+
+@media (width<= 768px) {
+  @media (max-width: 768px) {
+  }
+
+  global {
+    background: black;
+  }
+}
+
+@media (768 < width <=992) {
+}
+
+@media (max-width: 992px) {
+  global {
+    background: pink;
+  }
+}
+
+/* tablet */
+
+@media (max-width: 992px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .article {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+  }
+
+  .country,
+  .date {
+    width: 50%;
+    height: 200px;
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+  article {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .art-img {
+    width: 100%;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  article .btn {
+    width: 100%;
+  }
+}
+
+.side-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.country,
+.date {
+  width: 100%;
+  margin-top: 16px;
+}
